@@ -1,221 +1,6 @@
-# iScout-编译问题汇总
-[TOC]
+#2020.8.28 iSout debug
 
-
-
-## Shell 保存日志
-
-![截屏2020-08-30 下午4.50.20](ISout调试笔记.assets/截屏2020-08-30 下午4.50.20.png)
-
-## Git介绍
-
-### master
-
-
-
-### branch
-
-
-
-#### 用途
-
-- 创建一个属于自己的个人工作分支，以避免对主分支 master 造成太多的干扰，也方便与他人交流协作。
-- 当进行高风险的工作时，创建一个试验性的分支，扔掉一个烂摊子总比收拾一个烂摊子好得多。
-- 合并别人的工作的时候，最好是创建一个临时的分支，关于如何用临时分支合并别人的工作的技巧，将会在后面讲述。
-
-参考：https://www.raywenderlich.com/675-how-to-use-git-source-control-with-xcode-9#toc-anchor-003
-
-讲的不错
-
-### 用法
-
-#### 创建本地 git Repositories
-
-1.新建项目
-
-2.Source Control --> Create Git Repositories 
-
-<img src="ISout调试笔记.assets/截屏2020-08-28 上午11.08.18.png" alt="截屏2020-08-28 上午11.08.18" style="zoom:25%;" />
-
-3.修改代码
-
-4.Source Control -->commit -->选择文件-->输入备注
-
-<img src="ISout调试笔记.assets/截屏2020-08-28 上午11.06.01.png" alt="截屏2020-08-28 上午11.06.01" style="zoom:50%;" />
-
-5.查看版本，如下
-
-![截屏2020-08-28 上午11.06.39](ISout调试笔记.assets/截屏2020-08-28 上午11.06.39.png)
-
-6.点击可以查看与上一个版本的区别
-
-![截屏2020-08-28 上午11.07.26](ISout调试笔记.assets/截屏2020-08-28 上午11.07.26.png)
-
-
-
-#### 提交文件，创建分支
-
-1.修改文件
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午9.21.20.png" alt="截屏2020-08-30 上午9.21.20" style="zoom:33%;" />
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午9.53.18.png" alt="截屏2020-08-30 上午9.53.18" style="zoom:50%;" />
-
-A :his is a new file that has not yet been committed to the repository.
-
-
-
-2.创建分支，提交文件
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午9.24.35.png" alt="截屏2020-08-30 上午9.24.35" style="zoom:33%;" />
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午9.21.02.png" alt="截屏2020-08-30 上午9.21.02" style="zoom:33%;" />
-
-3. 查看版本，master的版本每变，分支延长了，可以创建多个分支
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午9.23.13.png" alt="截屏2020-08-30 上午9.23.13" style="zoom:25%;" />
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午9.26.04.png" alt="截屏2020-08-30 上午9.26.04" style="zoom: 25%;" /><img src="ISout调试笔记.assets/截屏2020-08-30 上午9.34.02.png" alt="截屏2020-08-30 上午9.34.02" style="zoom:25%;" />
-
-
-
-#### 退回上一个commit的版本 discard all changes
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午9.57.06.png" alt="截屏2020-08-30 上午9.57.06" style="zoom: 33%;" /><img src="ISout调试笔记.assets/截屏2020-08-30 上午9.57.14.png" alt="截屏2020-08-30 上午9.57.14" style="zoom:33%;" />
-
-
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午9.57.21-8752705.png" alt="截屏2020-08-30 上午9.57.21" style="zoom:33%;" />
-
-限制在于，只能回退到上一个版本
-
-#### 返回历史版本
-
-点击右上角，分屏
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午10.14.32.png" alt="截屏2020-08-30 上午10.14.32" style="zoom:33%;" />
-
-![截屏2020-08-30 上午10.15.14](ISout调试笔记.assets/截屏2020-08-30 上午10.15.14.png)
-
-By default, your current source file is shown on the left and the most recent revision stored in the repository – Git calls this the HEAD – is shown on the right.
-
-查看历史版本
-
-![截屏2020-08-30 上午10.16.27](ISout调试笔记.assets/截屏2020-08-30 上午10.16.27.png)
-
-最开始的版本
-
-![截屏2020-08-30 上午10.17.54](ISout调试笔记.assets/截屏2020-08-30 上午10.17.54.png)
-
-![截屏2020-08-30 上午10.18.52](ISout调试笔记.assets/截屏2020-08-30 上午10.18.52.png)
-
-恢复到该版本，点击中间的箭头，discard change，还可以分区域
-
-![截屏2020-08-30 上午10.20.04](ISout调试笔记.assets/截屏2020-08-30 上午10.20.04.png)
-
-![截屏2020-08-30 上午10.20.54](ISout调试笔记.assets/截屏2020-08-30 上午10.20.54.png)
-
-版本对应
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午10.30.44.png" alt="截屏2020-08-30 上午10.30.44" style="zoom:50%;" />
-
-可以显示修改人
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午10.32.58.png" alt="截屏2020-08-30 上午10.32.58" style="zoom:50%;" />
-
-#### 切换分支
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午10.41.24.png" alt="截屏2020-08-30 上午10.41.24" style="zoom:33%;" />
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午10.41.29.png" alt="截屏2020-08-30 上午10.41.29" style="zoom:33%;" /><img src="ISout调试笔记.assets/截屏2020-08-30 上午10.41.52.png" alt="截屏2020-08-30 上午10.41.52" style="zoom:33%;" />
-
-#### 合并分支 Merge
-
-1. 在分支为current下进行修改
-
-2. 修改完后进行commit
-
-3. 将current改为master
-
-4. merge to master
-
-   <img src="ISout调试笔记.assets/截屏2020-08-30 上午10.49.25.png" alt="截屏2020-08-30 上午10.49.25" style="zoom:67%;" />
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午10.49.32.png" alt="截屏2020-08-30 上午10.49.32" style="zoom:50%;" />
-
-![截屏2020-08-30 上午10.49.42](ISout调试笔记.assets/截屏2020-08-30 上午10.49.42-8756077.png)
-
-#### 连接到github
-
-参考：https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token
-
-1. 新建项目，可以勾选git,如果没有勾选，后续可以创建（p2）,在方框可以看到新的master
-
-   
-
-   <img src="ISout调试笔记.assets/截屏2020-08-30 上午8.40.04.png" alt="截屏2020-08-30 上午8.40.04" style="zoom:25%;" /><img src="ISout调试笔记.assets/截屏2020-08-30 上午8.42.30.png" alt="截屏2020-08-30 上午8.42.30" style="zoom:25%;" /><img src="ISout调试笔记.assets/截屏2020-08-30 上午8.43.42.png" alt="截屏2020-08-30 上午8.43.42" style="zoom:25%;" />
-
-2. 关联GitHub账号
-
-<img src="ISout调试笔记.assets/截屏2020-08-28 上午9.25.34.png" alt="截屏2020-08-28 上午9.25.34" style="zoom: 33%;" />
-
-
-
-3. 点击generate new token ,起名字，然后输入到第二幅图片
-
-![截屏2020-08-28 上午9.29.54](ISout调试笔记.assets/截屏2020-08-28 上午9.29.54.png)
-
-<img src="ISout调试笔记.assets/截屏2020-08-28 上午9.25.42.png" alt="截屏2020-08-28 上午9.25.42" style="zoom:50%;" />
-
-4. 点击新创建的token，打钩赋予权力
-
-
-
-![截屏2020-08-30 上午8.34.56](ISout调试笔记.assets/截屏2020-08-30 上午8.34.56.png)
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午8.36.49.png" alt="截屏2020-08-30 上午8.36.49" style="zoom:33%;" />
-
-4. 创建github上的repository
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午8.45.14.png" alt="截屏2020-08-30 上午8.45.14" style="zoom:33%;" /><img src="ISout调试笔记.assets/截屏2020-08-30 上午8.46.04.png" alt="截屏2020-08-30 上午8.46.04" style="zoom:33%;" />
-
-5.前往GitHub查看
-
-![截屏2020-08-30 上午8.48.58](ISout调试笔记.assets/截屏2020-08-30 上午8.48.58.png)
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午8.50.17.png" alt="截屏2020-08-30 上午8.50.17" style="zoom:33%;" />
-
-6. 修改文件，commit 主要是将暂存区里的改动给提交到本地的版本库,修改处有小蓝点
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午8.51.13.png" alt="截屏2020-08-30 上午8.51.13" style="zoom:33%;" /><img src="ISout调试笔记.assets/截屏2020-08-30 上午8.50.48-8749846.png" alt="截屏2020-08-30 上午8.50.48" style="zoom:25%;" />
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午9.11.44-8749937.png" alt="截屏2020-08-30 上午9.11.44" style="zoom:50%;" />
-
-7.查看版本控制
-
-点击first commit 会产生和上一个版本的对比
-
-![截屏2020-08-30 上午9.12.59](ISout调试笔记.assets/截屏2020-08-30 上午9.12.59.png)
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午9.14.11.png" alt="截屏2020-08-30 上午9.14.11" style="zoom:50%;" />
-
-#### 查看Github 上的对应分支
-
-<img src="ISout调试笔记.assets/截屏2020-08-30 上午11.07.08.png" alt="截屏2020-08-30 上午11.07.08" style="zoom:33%;" />
-
-
-
-#### 从github上获取版本
-
-#### 命令行控制Git
-
-参考：https://blog.csdn.net/denggun12345/article/details/81630547
-
-
-
-## 2020.8.28 iSout debug
-
-### Bug1:模拟器适配 
+## Bug1:模拟器适配 
 
 ![截屏2020-08-28 下午3.16.40](ISout调试笔记.assets/截屏2020-08-28 下午3.16.40.png)
 
@@ -230,7 +15,7 @@ iScout.xcodepro
 
 
 
-### Bug2:Boost 库未配置
+## Bug2:Boost 库未配置
 
 
 
@@ -238,7 +23,7 @@ iScout.xcodepro
 
 'boost/dynamic_bitset.hpp' file not found
 
-#### 安装boost库
+### 安装boost库
 
 方法1：
 
@@ -326,7 +111,7 @@ For compilers to find icu4c you may need to set:
 
 
 
-### Bug3：开发团队证书过期
+## Bug3：开发团队证书过期
 
 Failed to register bundle identifier.
 
@@ -474,13 +259,3 @@ Bug5:Apple Mach-O Linker Error
 参考：https://www.jianshu.com/p/ca1dc5ce92a2 发现类型2可能和block 有关
 
 可能的解决方案，但是不知道怎么加：https://www.xuebuyuan.com/2061394.html
-
-
-
-
-
-
-
-
-
-
