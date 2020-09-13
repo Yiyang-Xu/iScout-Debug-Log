@@ -259,3 +259,79 @@ Bug5:Apple Mach-O Linker Error
 参考：https://www.jianshu.com/p/ca1dc5ce92a2 发现类型2可能和block 有关
 
 可能的解决方案，但是不知道怎么加：https://www.xuebuyuan.com/2061394.html
+
+
+
+- [x] ### Bug 6: 'ceres/ceres.h' file not found
+
+#### 原因：
+
+> 缺少ceres library。
+
+什么是ceres library?
+
+> Ceres Solver [[1\]](http://ceres-solver.org/#f1) is an open source C++ library for modeling and solving large, complicated optimization problems. It can be used to solve [Non-linear Least Squares](http://en.wikipedia.org/wiki/Non-linear_least_squares) problems with bounds constraints and general unconstrained optimization problems.
+
+#### 解决方法：
+
+Installation: use home-brew
+
+```
+brew install ceres-solver
+```
+
+****
+
+
+
+- [x] ### Bug 7: 'Eigen/Core' file not found
+
+<img src="/Users/michaelxu/Library/Application Support/typora-user-images/image-20200913160712831.png" alt="image-20200913160712831" style="zoom:50%;" />
+
+#### 原因1：Eigen 库未安装
+
+**✅解决方法：**使用docker或虚拟机进入linux环境，安装配置eigen库
+
+```
+sudo apt-get install libeigen3-dev
+```
+
+什么是Eigen库？
+
+> Eigen 是C++语言里的一个开源模版库，支持线性代数运算，矩阵和矢量运算，数值分析及其相关的算法。带了Eigen的库以后，运算操作就能直接实现Matlab里面的很多矩阵操作。为了应对不同的需求，Eigen库被分为多个功能模块，每个模块都有自己相对应的头文件，以供调用。 其中，Dense模块整合了绝大部分的模块，而Eigen模块更是整合了所有模块（也就是整个Eigen库）。在Eigen的官方教材里面了解到这个模版库需要自己安装到开发环境里。用的是终端的apt命令安装。
+
+#### 原因2: Eigen库已安装，但是源文件与目标文件链接出现问题
+
+**✅解决方法：**在`#include "Eigen/Core"`中加上eigen3的链接，变成`#include "eigen3/Eigen/Core"`
+
+****
+
+
+
+- [ ] ### Bug 8: Expected Identifier in 'log_severity.h'
+
+<img src="/Users/michaelxu/Library/Application Support/typora-user-images/image-20200913162250363.png" alt="image-20200913162250363" style="zoom:0%;" />
+
+#### Description:
+
+> It appears as a parse issue
+
+**Possible Reasons for having a parse issue**
+
+> - The file containing the data to be parsed does not exist.
+> - The data to be parsed contains an error. If you [downloaded](https://www.computerhope.com/jargon/d/download.htm) the file causing the parse error, try downloading the file again or look for an updated version of the file. If possible, try downloading the file from a different site.
+> - You may have insufficient [permissions](https://www.computerhope.com/jargon/p/permissi.htm) to access the file's data.
+> - The file's data is not compatible with the [version](https://www.computerhope.com/jargon/v/version.htm) of your [operating system](https://www.computerhope.com/jargon/o/os.htm) or [program](https://www.computerhope.com/jargon/p/program.htm).
+> - Insufficient disk space. If a file is written to a drive (e.g., [thumb drive](https://www.computerhope.com/jargon/j/jumpdriv.htm) or [SD card](https://www.computerhope.com/jargon/s/sdcard.htm)) that doesn't have enough space for the parsed results, an error is generated. Make sure the drive has enough space or move the file being parsed to your [hard drive](https://www.computerhope.com/jargon/h/harddriv.htm) if it's being run from removable media.
+
+⚠️Not Solved Yet
+
+****
+
+
+
+- [ ] ### Bug 9: Apple Mach-O Linker Error
+
+<img src="/Users/michaelxu/Library/Application Support/typora-user-images/image-20200913181501076.png" alt="image-20200913181501076" style="zoom:50%;" />
+
+
