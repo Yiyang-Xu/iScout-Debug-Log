@@ -1,8 +1,8 @@
-#2020.8.28 iSout debug
+# 2020.8.28 iSout debug
 
 ## Bug1:模拟器适配 
 
-![截屏2020-08-28 下午3.16.40](ISout调试笔记.assets/截屏2020-08-28 下午3.16.40.png)
+
 
 Building for ios Simulator, but the linked library 'libceres.a' was built for iOS.
 iScout.xcodepro
