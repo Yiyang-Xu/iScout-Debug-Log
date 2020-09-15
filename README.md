@@ -336,4 +336,5 @@ sudo apt-get install libeigen3-dev
 
 ### Bug 10: Undefined Symbol (On CCP's Computer) 
 #### Describtion
-
+![image](https://github.com/Yiyang-Xu/iScout-Debug-Log/blob/master/images/ccp_computer_error1.png)
+![image](https://github.com/Yiyang-Xu/iScout-Debug-Log/blob/master/images/iMac_error2.png)
