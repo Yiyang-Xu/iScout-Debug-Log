@@ -225,7 +225,7 @@ https://github.com/HKUST-Aerial-Robotics/VINS-Mobile/issues/117
 
 
 
-Bug5:Apple Mach-O Linker Error
+## Bug5:Apple Mach-O Linker Error
 
 一共23个
 
@@ -330,8 +330,10 @@ sudo apt-get install libeigen3-dev
 
 
 
-- [ ] ### Bug 9: Apple Mach-O Linker Error
+### Bug 9: Apple Mach-O Linker Error
 
 <img src="/Users/michaelxu/Library/Application Support/typora-user-images/image-20200913181501076.png" alt="image-20200913181501076" style="zoom:50%;" />
 
+### Bug 10: Undefined Symbol (On CCP's Computer) 
+#### Describtion
 
